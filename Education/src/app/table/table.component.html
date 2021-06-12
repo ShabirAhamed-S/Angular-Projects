@@ -1,0 +1,49 @@
+<!-- Table Tag -->
+
+<body class="body">
+<h1>Table Dashboard</h1>
+<div>
+<nav class="navbar">
+  <input class = "form-control" type = "text" name="firstName" [(ngModel)] = "firstName" (ngModelChange) = "Search()" placeholder = "Enter the name to search" >    </nav>
+  <button type="button" name="add"  class="btn btn-primary" (click)="add()">Add</button>
+</div>
+  
+
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th (click)="sort('id')">User id&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click)="sort('name')">Name&nbsp;<i class="fa fa-sort"></i></th>
+    <th>User Name</th>
+    <th>Email ID</th>
+    <th>Phone Number</th>
+    <th>Website</th>
+    <th>Actions</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let u of users | orderBy: key: reverse | paginate: { itemsPerPage: 5, currentPage: p }">
+      <td>{{u.id}}</td>
+      <td>{{u.name}}</td>
+      <td>{{u.username}}</td>
+      <td>{{u.email}}</td>
+      <td>{{u.phone}}</td>
+      <td>{{u.website}}</td>
+      <td>
+        <button type ="button" class="btn btn-primary" (click)="deleteRow(u.id)">Delete </button> &nbsp;
+        <button type ="button" class="btn btn-danger" (click)="update(u.id)">Update </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</body> 
+
+
+<!-- ng2-smart-table tag -->
+
+<!-- <ng2-smart-table [settings]="settings" [source]="employees">
+</ng2-smart-table> -->

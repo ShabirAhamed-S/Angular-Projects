@@ -1,0 +1,12 @@
+.box{
+  padding: 5px 5px;
+  background-color: rgb(247, 247, 247);
+}
+
+.container-fluid{
+  background-color: rgb(251, 253, 253);
+}
+
+.box h5{
+  font-size: 16px;
+}

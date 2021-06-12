@@ -1,0 +1,12 @@
+.navbar {
+    background-color: azure;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-size: 16px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}

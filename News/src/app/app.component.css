@@ -1,0 +1,12 @@
+.navbar {
+  background-color: rgb(222, 238, 238);
+}
+
+.navbar-brand{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
